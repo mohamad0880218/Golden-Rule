@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Golden Rule - Custom Apparel</title>
+
+<link rel="icon" type="image/png" href="./symbol.png">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+
+  <div class="brand">
+    <img src="./symbol.png" class="logo" alt="logo">
+
+    <div class="brand-text">
+      <h1>GOLDEN RULE</h1>
+      <span>Embroidery & Custom Apparel</span>
+    </div>
+
+  </div>
+
+  <nav>
+    <button onclick="showProducts()">Products</button>
+    <button onclick="scrollToStudio()">Design Studio</button>
+  </nav>
+
+</header>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+
+  <div class="hero-bg"></div>
+
+  <div class="hero-content">
+
+    <img src="./symbol.png" class="hero-logo" alt="logo">
+
+    <h2>Premium Embroidery & Custom Apparel</h2>
+
+    <p>
+      Design T-shirts, hoodies, caps, polos, outerwear, and bottoms
+      with real-time customization and professional preview system.
+    </p>
+
+    <button class="cta" onclick="showProducts()">Browse Products</button>
+
+  </div>
+
+</section>
+
+<!-- PRODUCTS -->
+<section class="products hidden" id="products">
+
+  <h2 class="section-title">Our Collection</h2>
+
+  <div class="grid" id="productGrid"></div>
+
+</section>
+
+<!-- DESIGN STUDIO -->
+<section class="designer" id="designer">
+
+  <h2 class="section-title">Design Studio</h2>
+
+  <div class="studio">
+
+    <div class="mockup">
+      <img id="mockupImg" class="mockup-img">
+
+      <div id="designBox" class="design-box">
+        <img id="designImg">
+      </div>
+    </div>
+
+    <div class="controls">
+      <input type="file" onchange="upload(event)">
+      <input type="range" min="80" max="260" value="140" oninput="resize(this.value)">
+      <button onclick="downloadDesign()">Export Design</button>
+    </div>
+
+  </div>
+
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
