@@ -1,0 +1,2 @@
+# Golden-Rule
+Golden Rule
